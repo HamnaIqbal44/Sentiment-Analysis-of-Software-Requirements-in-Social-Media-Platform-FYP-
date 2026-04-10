@@ -1,21 +1,73 @@
-# FYP Description
-## Automated User Feedback Analysis Tool
+# 💬 Sentiment Analysis of Software Requirements in Social Media Platform (FYP)
 
-### 📖 Project Overview
+## 🧭 Project Overview
+An automated user-feedback analysis pipeline that collects app reviews, performs sentiment analysis, categorises feedback into software quality attributes, and produces improvement suggestions (optionally using Phi‑3 via Ollama), presented through a Streamlit dashboard.
 
-Software maintenance is the most important and time-consuming phase of the Software Development Life Cycle (SDLC). Developers often spend significant effort analyzing user feedback to identify issues and required improvements. This project proposes an automated feedback analysis tool that collects user reviews from the Google Play Store for various social media applications, performs sentiment analysis, categorizes reviews into different quality attributes, and then provides possible suggestions for improvement using the Phi-3 LLM model by Ollama.
-By automating the process of interpreting feedback, this tool helps developers maintain social media applications more effectively, saving time and cost while ensuring that user concerns and expectations are addressed.
+## ✨ Features
+- Review collection from Google Play Store (scraping scripts included)
+- Sentiment analysis (positive / neutral / negative)
+- Quality-attribute categorisation (e.g., performance, usability, security, reliability)
+- Optional LLM-based improvement suggestions (Phi‑3 via Ollama)
+- Multiple dashboard scripts for interactive exploration and summary insights
 
-### 🚀 Features
+## 🏗️ System Architecture
+- **Ingestion:** scraping and/or CSV import
+- **Preprocessing:** cleaning, transformation, feature preparation
+- **Analysis:** sentiment classification + quality-attribute mapping
+- **Suggestion:** optional LLM-assisted recommendations (Ollama)
+- **UI:** Streamlit dashboard(s)
 
-1. Scrapes user reviews from Google Play Store.
-2. Performs sentiment analysis (positive, negative, neutral).
-3. Categorizes feedback into quality attributes (e.g., performance, usability, security, reliability).
-4. Uses LLM Phi-3 (Ollama) to generate actionable improvement suggestions.
-5. Provides structured insights for developers to improve software maintenance.
 
-### 🛠️ Tech Stack
+**Architecture flow (text):**  
+`Google Play Store Reviews → Scraping/CSV → Preprocessing → Sentiment + Quality Attributes → (Optional) LLM Suggestions → Streamlit Dashboard`
 
+**Architecture diagram (image placeholder, reference-style):**
+```md
+![System Architecture](assets/architecture.png)
+```
+
+**Architecture diagram (Mermaid option):**
+```mermaid
+flowchart LR
+  GP[Google Play Reviews] --> SC[Scraping / CSV Import]
+  SC --> PP[Preprocessing]
+  PP --> SA[Sentiment Analysis]
+  PP --> QA[Quality Attribute Categorisation]
+  SA --> UI[Streamlit Dashboard]
+  QA --> UI
+  UI --> OUT[Insights + Priorities]
+  OUT --> LLM[Ollama Phi-3 (optional)]
+  LLM --> SUG[Improvement Suggestions]
+```
+# Use Case Diagram
+<img width="1337" height="1069" alt="image" src="https://github.com/user-attachments/assets/9ddc1c77-906e-4079-98d3-9733c0420c69" />
+
+# Activity Diagram
+<img width="1391" height="1237" alt="image" src="https://github.com/user-attachments/assets/aa4bb207-0859-49cc-80fa-9c31e841f598" />
+
+## 🖥️ UI Interface
+Add screenshots and a short demo GIF to `assets/` and link them here.
+
+```md
+Reviews Scrapping
+<img width="994" height="865" alt="image" src="https://github.com/user-attachments/assets/f003d350-7c19-472d-a8d8-6d01ca870e80" />
+
+Dataset Creation
+<img width="1140" height="526" alt="image" src="https://github.com/user-attachments/assets/566a324b-0df6-4df0-8069-b48c0b1a79c9" />
+
+Menu Bar
+<img width="546" height="659" alt="image" src="https://github.com/user-attachments/assets/fb666ae3-30f8-4460-86d8-d88a760dc953" />
+
+LLM Suggestions
+<img width="1264" height="748" alt="image" src="https://github.com/user-attachments/assets/479537d7-ba1d-46f8-b40b-61327183ccf1" />
+
+![Dashboard Home](assets/ui-dashboard-home.png)
+![Sentiment Distribution](assets/ui-sentiment.png)
+![Quality Attributes](assets/ui-quality.png)
+![Demo](assets/demo.gif)
+```
+
+## 🧰 Tech Stack
 1. Programming Language: Python
 2. Libraries & Tools:
    2.1. Web Scraping → BeautifulSoup, Selenium
@@ -23,6 +75,65 @@ By automating the process of interpreting feedback, this tool helps developers m
    2.3. Sentiment Analysis → Scikit-learn, Transformers (HuggingFace)
    2.4. Language Model → Phi-3 (Ollama)
 3. Data Source: Google Play Store Reviews
+
+## ⚙️ Installation and Setup
+
+### 1) Clone
+```bash
+git clone https://github.com/HamnaIqbal44/Sentiment-Analysis-of-Software-Requirements-in-Social-Media-Platform-FYP-.git
+cd Sentiment-Analysis-of-Software-Requirements-in-Social-Media-Platform-FYP-
+```
+
+### 2) Create and activate a virtual environment
+```bash
+python -m venv .venv
+```
+
+**Windows**
+```bash
+.venv\Scripts\activate
+```
+
+**macOS/Linux**
+```bash
+source .venv/bin/activate
+```
+
+### 3) Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4) Run the Streamlit dashboard
+> This repository contains multiple candidate entrypoints (examples include `dashboard.py`, `senti_dash.py`, `sentidash.py`).  
+> Choose one and set it here:
+
+```bash
+streamlit run <STREAMLIT_ENTRYPOINT>.py
+```
+
+## 🗃️ Dataset
+- Data source: Google Play Store reviews (scraped) and/or local CSVs in this repository.
+
+## 🧪 Usage / Demo
+1. Run the Streamlit entrypoint.
+2. Load sample CSV or run scraping (if enabled).
+3. Review sentiment trends and quality-attribute breakdowns.
+4. Inspect suggestion outputs (if LLM option enabled).
+
+## 🏷️ Suggested Topics/Tags
+nlp, sentiment-analysis, requirements-engineering, streamlit, python, transformers, ollama, quality-attributes, data-science
+
+## 📄 Licence
+Recommended: MIT (add `LICENSE` if missing and your dataset usage permits).
+
+## 🔖 Placeholders to Update
+- <STREAMLIT_ENTRYPOINT>
+- <ADD_DATASET_LINK>
+- assets/architecture.png
+- assets/demo.gif
+- assets/ui-*.png
+
 
 ### 👩‍🎓 Author
 Hamna Iqbal
