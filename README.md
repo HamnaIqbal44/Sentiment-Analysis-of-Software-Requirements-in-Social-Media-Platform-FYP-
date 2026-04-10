@@ -85,7 +85,7 @@ pip install -r requirements.txt
 > Choose one and set it here:
 
 ```bash
-streamlit run <STREAMLIT_ENTRYPOINT>.py
+streamlit run dashboard.py
 ```
 
 ## 🗃️ Dataset
