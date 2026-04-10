@@ -22,24 +22,26 @@ An automated user-feedback analysis pipeline that collects app reviews, performs
 `Google Play Store Reviews → Scraping/CSV → Preprocessing → Sentiment + Quality Attributes → (Optional) LLM Suggestions → Streamlit Dashboard`
 
 ##### Use Case Diagram
-<img width="1337" height="1069" alt="image" src="https://github.com/user-attachments/assets/9ddc1c77-906e-4079-98d3-9733c0420c69" />
+<img width="969" height="742" alt="image" src="https://github.com/user-attachments/assets/5c072785-6a15-4667-8fc8-76ecfd537ecd" />
 
-##### Activity Diagram
-<img width="1391" height="1237" alt="image" src="https://github.com/user-attachments/assets/aa4bb207-0859-49cc-80fa-9c31e841f598" />
+##### Sequence Diagram
+<img width="942" height="835" alt="image" src="https://github.com/user-attachments/assets/3fb7a009-d1d0-4413-9e75-93c67813c176" />
+
 
 ## 🖥️ UI Interface
 
                                               # Reviews Scrapping
-<img width="994" height="865" alt="image" src="https://github.com/user-attachments/assets/f003d350-7c19-472d-a8d8-6d01ca870e80" />
+<img width="1126" height="1002" alt="image" src="https://github.com/user-attachments/assets/c464c9ee-f7dd-4d14-8f78-f6ecf11cb7d2" />
 
                                               # Dataset Creation
-<img width="1140" height="526" alt="image" src="https://github.com/user-attachments/assets/566a324b-0df6-4df0-8069-b48c0b1a79c9" />
+<img width="1303" height="580" alt="image" src="https://github.com/user-attachments/assets/f5c1bbab-e218-4a50-910d-0cd87999115b" />
 
                                                     # Menu Bar
-<img width="546" height="659" alt="image" src="https://github.com/user-attachments/assets/fb666ae3-30f8-4460-86d8-d88a760dc953" />
+<img width="599" height="767" alt="image" src="https://github.com/user-attachments/assets/43ab4b76-4a32-4aa6-ae48-0101a54caac3" />
 
                                                 # LLM Suggestions
-<img width="1264" height="748" alt="image" src="https://github.com/user-attachments/assets/479537d7-ba1d-46f8-b40b-61327183ccf1" />
+<img width="1225" height="712" alt="image" src="https://github.com/user-attachments/assets/056d2872-6dac-45d6-8ff8-4969d85f9d62" />
+
 
 
 ## 🧰 Tech Stack
