@@ -21,10 +21,10 @@ An automated user-feedback analysis pipeline that collects app reviews, performs
 **Architecture flow (text):**  
 `Google Play Store Reviews → Scraping/CSV → Preprocessing → Sentiment + Quality Attributes → (Optional) LLM Suggestions → Streamlit Dashboard`
 
-# Use Case Diagram
+##### Use Case Diagram
 <img width="1337" height="1069" alt="image" src="https://github.com/user-attachments/assets/9ddc1c77-906e-4079-98d3-9733c0420c69" />
 
-# Activity Diagram
+##### Activity Diagram
 <img width="1391" height="1237" alt="image" src="https://github.com/user-attachments/assets/aa4bb207-0859-49cc-80fa-9c31e841f598" />
 
 ## 🖥️ UI Interface
