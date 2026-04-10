@@ -21,24 +21,6 @@ An automated user-feedback analysis pipeline that collects app reviews, performs
 **Architecture flow (text):**  
 `Google Play Store Reviews → Scraping/CSV → Preprocessing → Sentiment + Quality Attributes → (Optional) LLM Suggestions → Streamlit Dashboard`
 
-**Architecture diagram (image placeholder, reference-style):**
-```md
-![System Architecture](assets/architecture.png)
-```
-
-**Architecture diagram (Mermaid option):**
-```mermaid
-flowchart LR
-  GP[Google Play Reviews] --> SC[Scraping / CSV Import]
-  SC --> PP[Preprocessing]
-  PP --> SA[Sentiment Analysis]
-  PP --> QA[Quality Attribute Categorisation]
-  SA --> UI[Streamlit Dashboard]
-  QA --> UI
-  UI --> OUT[Insights + Priorities]
-  OUT --> LLM[Ollama Phi-3 (optional)]
-  LLM --> SUG[Improvement Suggestions]
-```
 # Use Case Diagram
 <img width="1337" height="1069" alt="image" src="https://github.com/user-attachments/assets/9ddc1c77-906e-4079-98d3-9733c0420c69" />
 
@@ -46,35 +28,27 @@ flowchart LR
 <img width="1391" height="1237" alt="image" src="https://github.com/user-attachments/assets/aa4bb207-0859-49cc-80fa-9c31e841f598" />
 
 ## 🖥️ UI Interface
-Add screenshots and a short demo GIF to `assets/` and link them here.
 
-```md
-Reviews Scrapping
+                                              # Reviews Scrapping
 <img width="994" height="865" alt="image" src="https://github.com/user-attachments/assets/f003d350-7c19-472d-a8d8-6d01ca870e80" />
 
-Dataset Creation
+                                              # Dataset Creation
 <img width="1140" height="526" alt="image" src="https://github.com/user-attachments/assets/566a324b-0df6-4df0-8069-b48c0b1a79c9" />
 
-Menu Bar
+                                                    # Menu Bar
 <img width="546" height="659" alt="image" src="https://github.com/user-attachments/assets/fb666ae3-30f8-4460-86d8-d88a760dc953" />
 
-LLM Suggestions
+                                                # LLM Suggestions
 <img width="1264" height="748" alt="image" src="https://github.com/user-attachments/assets/479537d7-ba1d-46f8-b40b-61327183ccf1" />
 
-![Dashboard Home](assets/ui-dashboard-home.png)
-![Sentiment Distribution](assets/ui-sentiment.png)
-![Quality Attributes](assets/ui-quality.png)
-![Demo](assets/demo.gif)
-```
 
 ## 🧰 Tech Stack
-1. Programming Language: Python
-2. Libraries & Tools:
-   2.1. Web Scraping → BeautifulSoup, Selenium
-   2.2. Data Handling → Pandas, NumPy
-   2.3. Sentiment Analysis → Scikit-learn, Transformers (HuggingFace)
-   2.4. Language Model → Phi-3 (Ollama)
-3. Data Source: Google Play Store Reviews
+- Python
+- Web scraping: Beautiful Soup *(optional: Selenium if enabled)*
+- NLP/ML: scikit-learn, Transformers *(as used in your pipeline)*
+- LLM (optional): Ollama (Phi‑3)
+- Data/visualisation: Pandas, NumPy, Plotly/Matplotlib/Seaborn
+- UI: Streamlit
 
 ## ⚙️ Installation and Setup
 
@@ -126,14 +100,6 @@ nlp, sentiment-analysis, requirements-engineering, streamlit, python, transforme
 
 ## 📄 Licence
 Recommended: MIT (add `LICENSE` if missing and your dataset usage permits).
-
-## 🔖 Placeholders to Update
-- <STREAMLIT_ENTRYPOINT>
-- <ADD_DATASET_LINK>
-- assets/architecture.png
-- assets/demo.gif
-- assets/ui-*.png
-
 
 ### 👩‍🎓 Author
 Hamna Iqbal
