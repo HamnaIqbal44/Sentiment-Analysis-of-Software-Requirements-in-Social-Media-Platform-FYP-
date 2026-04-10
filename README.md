@@ -97,9 +97,6 @@ streamlit run <STREAMLIT_ENTRYPOINT>.py
 3. Review sentiment trends and quality-attribute breakdowns.
 4. Inspect suggestion outputs (if LLM option enabled).
 
-## 🏷️ Suggested Topics/Tags
-nlp, sentiment-analysis, requirements-engineering, streamlit, python, transformers, ollama, quality-attributes, data-science
-
 ## 📄 Licence
 Recommended: MIT (add `LICENSE` if missing and your dataset usage permits).
 
